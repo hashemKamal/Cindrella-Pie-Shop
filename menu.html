@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Menu - Cindrella's Pie Shop</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        crossorigin="anonymous">
+    <link href="css/bootstrap-override.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+
+<body>
+    <header>
+        <!-- reuse navbar from index.html -->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/pie.png" width="30" height="30" class="d-inline-block align-top" alt="Logo">
+                    Cindrella's Pie Shop
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="nav navbar-nav me-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="menu.html">Menu</a></li>
+                        <li class="nav-item"><a class="nav-link" href="piesubscription.html">Pie subscription</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                        <li class="nav-item ms-2"><a class="btn btn-sm btn-outline-light" href="admin.html">Admin</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container" style="margin-top:90px">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h1>Menu</h1>
+            <div>
+                <a class="btn btn-primary" href="add-item.html">Add New Item</a>
+                <a class="btn btn-outline-primary" href="cart.html">Cart</a>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-md-4">
+                <input id="searchInput" class="form-control" placeholder="Search by name..." />
+            </div>
+            <div class="col-md-3">
+                <select id="categoryFilter" class="form-select" title="filter">
+                    <option value="">All categories</option>
+                    <option>Starters</option>
+                    <option>Main</option>
+                    <option>Desserts</option>
+                    <option>Drinks</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <div class="input-group">
+                    <input id="minPrice" type="number" class="form-control" placeholder="Min price">
+                    <input id="maxPrice" type="number" class="form-control" placeholder="Max price">
+                </div>
+            </div>
+            <div class="col-md-2 text-end">
+                <button id="clearFilters" class="btn btn-secondary">Clear</button>
+            </div>
+        </div>
+
+        <div id="itemsRow" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            <!-- items will be rendered here -->
+        </div>
+
+        <nav aria-label="Page navigation" class="mt-4">
+            <ul id="pagination" class="pagination"></ul>
+        </nav>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="js/api.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/menu.js"></script>
+</body>
+
+</html>
