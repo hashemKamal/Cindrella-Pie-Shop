@@ -1,0 +1,1 @@
+Developed a responsive frontend web application for an online pie shop, featuring a complete product catalog, shopping cart, and checkout flow. The project is built with HTML, CSS, and JavaScript, and integrates mock APIs to simulate dynamic data handling for menus, orders, and subscriptions.
